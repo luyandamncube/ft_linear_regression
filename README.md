@@ -12,7 +12,7 @@ Don't really know what I'm doing with this one but the plan is to accelerate my 
 2. forecasting an effect,
 3. trend forecasting.
 
-## Linear Regression
+## Objective
 This project aims to predict the price of a car based on it's mileage.
 
 ## Topics covered
