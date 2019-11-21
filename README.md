@@ -20,3 +20,6 @@ This project aims to predict the price of a car based on it's mileage.
 * Predictive Analysis
 * Regression Modelling
 
+## Resources
+[https://www.mathsisfun.com/data/least-squares-regression.html](Linear Regression using 'Least-Squares')
+[https://www.youtube.com/watch?v=T5pRlIbr6gg&list=PL2-dafEMk2A6QKz1mrk1uIGfHkC1zZ6UU](Learn Python for Data Science) 
