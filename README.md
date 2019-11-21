@@ -27,7 +27,7 @@ This project aims to predict the price of a car based on it's mileage.
 
     ├── Decision Trees - Gender classifier using body measurements
     ├── Tokenisation - Twitter sentiment analysis 
-    ├── Collaborative Systems - [Movie Recommender](https://www.youtube.com/watch?v=9gBC9R-msAk)
+    ├── Collaborative Systems - Movie Recommender
     ├── Tokenisation - Twitter sentiment analysis 
     ├── Tokenisation - Twitter sentiment analysis 
     ├── Tokenisation - Twitter sentiment analysis 
