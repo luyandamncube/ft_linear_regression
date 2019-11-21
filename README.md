@@ -21,4 +21,4 @@ This project aims to predict the price of a car based on it's mileage.
 * Regression Modelling
 
 ## Resources
-[DataSci](https://github.com/luyandamncube/DataSci) My repo for all python and data science learning
+[DataSci](https://github.com/luyandamncube/DataSci), My repo for all python and data science learning
