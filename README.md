@@ -20,5 +20,16 @@ This project aims to predict the price of a car based on it's mileage.
 * Predictive Analysis
 * Regression Modelling
 
+## Python Dependencies
+`pandas`, `plotly`, `numpy`, `math`
+
+## Usage
+Run `python .\trainer.py .\dataset_00.csv`, where `.\dataset_00.csv` is the training dataset in csv format:
+| mileage       | price         |
+| ------------- |:-------------:|
+| 240000        | 3650          |
+| 139800        | 3800          |
+| 150500        | 4400          |
+
 ## Resources
 [DataSci](https://github.com/luyandamncube/DataSci), My repo for all python and data science learning
