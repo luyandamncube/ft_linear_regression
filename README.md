@@ -25,6 +25,7 @@ This project aims to predict the price of a car based on it's mileage.
 
 ## Usage
 Run `python .\trainer.py .\dataset_00.csv`, where `.\dataset_00.csv` is the training dataset in csv format:
+
 | mileage       | price         |
 | ------------- |:-------------:|
 | 240000        | 3650          |
