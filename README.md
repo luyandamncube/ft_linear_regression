@@ -37,5 +37,13 @@ This project aims to predict the price of a car based on it's mileage.
 
 2. Start the predictor. Run `python .\predictor.py <SAMPLE_MILEAGE>`, where `<SAMPLE_MILEAGE>`  is the mileage is a number (unsigned).
 
+## Result
+
+This is a sample data set where learning rate = 0.5, iterations = 200
+
+<p align="center">
+  <img src="model.png"/>
+</p>
+
 ## Resources
 [DataSci](https://github.com/luyandamncube/DataSci), My repo for all python and data science learning
