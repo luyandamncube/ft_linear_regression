@@ -24,13 +24,16 @@ This project aims to predict the price of a car based on it's mileage.
 `pandas`, `plotly`, `numpy`, `math`
 
 ## Usage
-Run `python .\trainer.py .\dataset_00.csv`, where `.\dataset_00.csv` is the training dataset in csv format:
+
+1. Start the trianer. Run `python .\trainer.py .\dataset_00.csv`, where `.\dataset_00.csv` is the training dataset in csv format:
 
 | mileage       | price         |
 | ------------- |:-------------:|
 | 240000        | 3650          |
 | 139800        | 3800          |
 | 150500        | 4400          |
+
+2. Start the predictor. Run `python .\predictor.py <SAMPLE_MILEAGE>`, where `<SAMPLE_MILEAGE>`  is the mileage is a number (unsigned).
 
 ## Resources
 [DataSci](https://github.com/luyandamncube/DataSci), My repo for all python and data science learning
