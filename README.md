@@ -21,11 +21,13 @@ This project aims to predict the price of a car based on it's mileage.
 * Regression Modelling
 
 ## Python Dependencies
-`pandas`, `plotly`, `math`, `tqdm` (for progress bar in terminal)
+* `pandas`, `plotly`, `math`, 
+* `tqdm` (for progress bar in terminal)
+![tqdm](progress.gif)
 
 ## Usage
 
-1. Start the trianer. Run `python .\trainer.py .\dataset_00.csv`, where `.\dataset_00.csv` is the training dataset in csv format:
+1. Start the trainer. Run `python .\trainer.py .\dataset_00.csv`, where `.\dataset_00.csv` is the training dataset in csv format:
 
 | mileage       | price         |
 | ------------- |:-------------:|
