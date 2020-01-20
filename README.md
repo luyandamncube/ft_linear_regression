@@ -21,7 +21,7 @@ This project aims to predict the price of a car based on it's mileage.
 * Regression Modelling
 
 ## Python Dependencies
-`pandas`, `plotly`, `numpy`, `math`
+`pandas`, `plotly`, `math`, `tqdm` (for progress bar in terminal)
 
 ## Usage
 
