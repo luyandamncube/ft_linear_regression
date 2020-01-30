@@ -92,8 +92,6 @@ def leastSquares():
     for index, row in df.iterrows():
         # Add yhat column
         df.at[index, 'yhat'] =  (theta1*df.at[index, 'mileage'])+theta0
-        # Add (y-ybar)^2 column
-        # df.at[index, '(y-ybar)^2'] = math.pow((df.at[index, 'price'] - ybar),2)
 
 def normalize():
     global df
@@ -106,15 +104,12 @@ def normalize():
         df.at[index, 'normalized_x'] =  (df.at[index, 'mileage']-minX)/(maxX-minX)
         df.at[index, 'normalized_y'] =  (df.at[index, 'price']-minY)/(maxY-minY)
 
-def computeMSE(iteration):
+def computeDerivatives(iteration):
     global theta0, theta1
     maxX = df['mileage'].max()
     minX = df['mileage'].min()
     maxY = df['price'].max()
     minY = df['price'].min()
-    # print(f'theta0 {theta0} | theta1 {theta1} ')
-    dfdb = 0
-    dfdm = 0
     for index, row in df.iterrows():
         # Adjust yhat with normalized data
         df.at[index, 'yhat'] = (theta1 * df.at[index, 'normalized_x']) + theta0
@@ -125,7 +120,7 @@ def computeMSE(iteration):
         # Adjust yhat with denormalized data
         df.at[index, 'denormalized_y'] =  (df.at[index, 'yhat']*(maxY-minY))+minY
         # Add (y-yhat)^2 column
-        df.at[index, '(y-yhat)^2'] = math.pow((df.at[index, 'normalized_y'] - df.at[index, 'yhat']),2)
+        # df.at[index, '(y-yhat)^2'] = math.pow(df.at[index, 'yhat'],2)
 
     # Plot current graph
     plotData(df['mileage'],df['denormalized_y'],'lines',f'iteration: {iteration}','green') 
@@ -135,22 +130,21 @@ def computeMSE(iteration):
 
     dfdb = colSums[7]
     dfdm = colSums[8]
-    MSE =  colSums[9]/N
-    # return (MSE, sum1, sum2)
-    return(dfdb,dfdm, MSE)
+    # MSE =  colSums[10] *(2/(2*N))
+    return(dfdb,dfdm)
 
 def gradientDescent():
     global theta0, theta1
-    theta0 = theta1 = MSE = 0
+    theta0 = theta1 = 0
     # print(N)
     for i in tqdm(range(iterations)):
-        dfdb,dfdm, MSE = computeMSE(i)
-        theta0 = theta0 - (learningRate * (dfdb/N))
-        theta1 = theta1 - (learningRate * (dfdm/N))
+        dfdb,dfdm = computeDerivatives(i)
+        theta0 = theta0 - (learningRate * (1/N) *dfdb)
+        theta1 = theta1 - (learningRate * (1/N) *dfdm)
         # print(f'{i} | theta0 {theta0} | theta1 {theta1} | dfdm {dfdm} | dfdb {dfdb} | MSE {MSE}')
     print(CGREEN+'SUCCESS: Applied model to data'+CEND)
     print('RESULTS:')
-    print(f'theta0 {theta0} | theta1 {theta1} | MSE {MSE}')
+    print(f'theta0 {theta0} | theta1 {theta1}')
 if __name__ == "__main__":
     runTrainer()
 
